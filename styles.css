@@ -670,6 +670,23 @@ textarea {
   gap: 12px;
 }
 
+.calendly-card {
+  padding: 8px;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.calendly-inline-widget {
+  width: 100%;
+  min-height: 720px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.calendly-inline-widget iframe {
+  border: none !important;
+}
+
 .portal-card a {
   color: var(--accent);
   text-decoration: none;
