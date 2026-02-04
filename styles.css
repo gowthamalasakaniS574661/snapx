@@ -42,7 +42,8 @@ body {
   background: radial-gradient(800px 600px at 50% 30%, rgba(25, 245, 255, 0.18), transparent 60%),
     radial-gradient(700px 500px at 50% 70%, rgba(255, 75, 216, 0.16), transparent 60%),
     rgba(6, 7, 12, 0.96);
-  transition: opacity 1s ease, visibility 1s ease;
+  transition: opacity 1.4s ease, visibility 1.4s ease;
+  animation: loaderAutoHide 1.4s ease 3.4s forwards;
 }
 
 .loader.is-hidden {
@@ -58,14 +59,14 @@ body {
   border: 2px solid rgba(25, 245, 255, 0.35);
   border-top-color: rgba(255, 75, 216, 0.7);
   box-shadow: 0 0 22px rgba(25, 245, 255, 0.2);
-  animation: ringSpin 1.4s linear infinite;
+  animation: ringSpin 2.6s linear infinite;
 }
 
 .loader-logo {
   width: 90px;
   height: 90px;
   filter: drop-shadow(0 0 12px rgba(25, 245, 255, 0.35));
-  animation: logoGlow 1.6s ease-in-out infinite;
+  animation: logoGlow 2.6s ease-in-out infinite;
 }
 
 .loader span {
@@ -738,6 +739,13 @@ textarea {
   50% {
     filter: drop-shadow(0 0 18px rgba(255, 75, 216, 0.45));
     transform: scale(1.04);
+  }
+}
+
+@keyframes loaderAutoHide {
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
 }
 

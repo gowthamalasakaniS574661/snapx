@@ -41,10 +41,25 @@ if (yearEl) {
 
 const loader = document.getElementById("page-loader");
 if (loader) {
-  window.addEventListener("load", () => {
-    loader.classList.add("is-hidden");
-    setTimeout(() => loader.remove(), 1100);
-  });
+  const loaderStart = Date.now();
+  const minVisibleMs = 3000;
+  let hideScheduled = false;
+
+  const hideLoader = () => {
+    if (hideScheduled || loader.classList.contains("is-hidden")) return;
+    hideScheduled = true;
+    const elapsed = Date.now() - loaderStart;
+    const remaining = Math.max(0, minVisibleMs - elapsed);
+
+    setTimeout(() => {
+      loader.classList.add("is-hidden");
+      setTimeout(() => loader.remove(), 1500);
+    }, remaining);
+  };
+
+  window.addEventListener("DOMContentLoaded", hideLoader);
+  window.addEventListener("load", hideLoader);
+  setTimeout(hideLoader, 4500);
 }
 
 const sliders = document.querySelectorAll("[data-slider]");
