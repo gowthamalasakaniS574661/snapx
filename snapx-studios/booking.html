@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Book a session with Snapx Studios USA." />
+  <title>Booking | Snapx Studios USA</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="logo" href="index.html">
+        <img src="assets/logo.svg" alt="Snapx Studios logo" />
+        <div>
+          <span>SNAPX STUDIOS</span>
+          <small>USA CREATIVE HOUSE</small>
+        </div>
+      </a>
+      <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button>
+      <nav class="site-nav" data-nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a class="active" href="booking.html">Booking</a>
+        <a href="portal.html">Client Portal</a>
+        <a href="contact.html">Contact</a>
+        <a class="btn small" href="booking.html">Book Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero">
+      <div data-reveal>
+        <div class="hero-badge">Booking Request</div>
+        <h1>Lock in your shoot date.</h1>
+        <p>
+          Share the details below and we will reply within 24-48 hours with availability and a custom quote.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="contact.html">Quick Question</a>
+          <a class="btn btn-outline" href="services.html">View Packages</a>
+        </div>
+      </div>
+      <div class="hero-visual" data-reveal>
+        <div class="frame one"><span>Availability</span></div>
+        <div class="frame two"><span>Custom Quote</span></div>
+        <div class="frame three"><span>Creative Plan</span></div>
+        <div class="frame four"><span>Delivery</span></div>
+      </div>
+    </section>
+
+    <section class="section container" data-reveal>
+      <h2 class="section-title">Availability Snapshot</h2>
+      <p class="section-subtitle">We are booking new sessions now. These are sample blocked dates and preferred time windows.</p>
+      <div class="availability-grid" style="margin-top: 24px;">
+        <div class="card">
+          <h3>Blocked Dates</h3>
+          <div class="chip-list" style="margin-top: 12px;">
+            <span class="chip blocked">2026-03-14</span>
+            <span class="chip blocked">2026-03-21</span>
+            <span class="chip blocked">2026-04-05</span>
+            <span class="chip blocked">2026-04-12</span>
+          </div>
+          <div class="notice">These dates are booked. Additional dates may be reserved for travel.</div>
+        </div>
+        <div class="card">
+          <h3>Preferred Time Slots</h3>
+          <div class="chip-list" style="margin-top: 12px;">
+            <span class="chip">Morning 8am - 11am</span>
+            <span class="chip">Golden Hour 4pm - 7pm</span>
+            <span class="chip">Night 8pm - 11pm</span>
+          </div>
+          <div class="notice">Exact timing is confirmed after the discovery call.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section container" data-reveal data-availability data-blocked="2026-03-14,2026-03-21,2026-04-05,2026-04-12">
+      <h2 class="section-title">Tell us about your project</h2>
+      <p class="section-subtitle">This form is a mockup. Hook it to your booking system when ready.</p>
+      <form class="card" style="margin-top: 24px;">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Full Name</label>
+            <input id="name" type="text" placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" type="email" placeholder="you@email.com" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" type="tel" placeholder="+1 (000) 000-0000" />
+          </div>
+          <div class="field">
+            <label for="service">Service Type</label>
+            <select id="service">
+              <option>Wedding</option>
+              <option>Portraits</option>
+              <option>Events</option>
+              <option>Reels / Social</option>
+              <option>Product Shoots</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="package">Package Selector</label>
+            <select id="package">
+              <option>Essentials</option>
+              <option>Signature</option>
+              <option>Premiere</option>
+              <option>Custom</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="date">Preferred Date</label>
+            <input id="date" type="date" />
+          </div>
+          <div class="field">
+            <label for="time">Preferred Time</label>
+            <input id="time" type="time" />
+          </div>
+          <div class="field">
+            <label for="location">Location</label>
+            <input id="location" type="text" placeholder="City, State" />
+          </div>
+        </div>
+        <div class="status-pill" data-status style="margin-top: 16px;">Select a date to check availability.</div>
+        <div class="field" style="margin-top: 16px;">
+          <label for="budget">Estimated Budget</label>
+          <select id="budget">
+            <option>$200 - $500</option>
+            <option>$500 - $1,200</option>
+            <option>$1,200 - $2,500</option>
+            <option>$2,500+</option>
+          </select>
+        </div>
+        <div class="field" style="margin-top: 16px;">
+          <label for="details">Tell us more</label>
+          <textarea id="details" placeholder="Describe your vision, vibe, and deliverables."></textarea>
+        </div>
+        <div class="hero-actions" style="margin-top: 20px;">
+          <button class="btn" type="button">Send Request</button>
+          <button class="btn btn-ghost" type="reset">Reset</button>
+        </div>
+        <p class="form-note">Sample form only. Replace with your real booking workflow or embedded scheduler.</p>
+      </form>
+    </section>
+
+    <section class="section container" data-reveal>
+      <h2 class="section-title">Policies</h2>
+      <p class="section-subtitle">Clear expectations to keep every project smooth.</p>
+      <div class="cards" style="margin-top: 24px;">
+        <article class="card">
+          <h3>Deposit</h3>
+          <p>A 30% retainer secures your date. Remaining balance is due 48 hours before the shoot.</p>
+        </article>
+        <article class="card">
+          <h3>Cancellation</h3>
+          <p>Reschedules are accepted with 7 days notice. Retainers are non-refundable.</p>
+        </article>
+        <article class="card">
+          <h3>Turnaround</h3>
+          <p>Highlights in 48 hours. Full edits delivered within 7-14 days.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section container" data-reveal>
+      <h2 class="section-title">FAQ</h2>
+      <div class="cards" style="margin-top: 24px;">
+        <article class="card">
+          <h3>Do you travel?</h3>
+          <p>Yes. We cover destination weddings and brand campaigns nationwide.</p>
+        </article>
+        <article class="card">
+          <h3>Can we customize packages?</h3>
+          <p>Absolutely. We build custom bundles for every client.</p>
+        </article>
+        <article class="card">
+          <h3>What is included in editing?</h3>
+          <p>Professional color grading, retouching, and delivery in web + print formats.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="quick-actions">
+    <a href="https://wa.me/17045550199" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp"><span>WA</span></a>
+    <a href="https://www.instagram.com/snapx_studios_usa" target="_blank" rel="noreferrer" aria-label="View Instagram"><span>IG</span></a>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Need to talk today? Call +1 (704) 555-0199 or email booking@snapxstudios.com.</p>
+      <p>Snapx Studios USA <span data-year></span>.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
