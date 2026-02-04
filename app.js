@@ -43,7 +43,7 @@ const loader = document.getElementById("page-loader");
 if (loader) {
   window.addEventListener("load", () => {
     loader.classList.add("is-hidden");
-    setTimeout(() => loader.remove(), 700);
+    setTimeout(() => loader.remove(), 1100);
   });
 }
 
