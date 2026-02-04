@@ -30,6 +30,49 @@ body {
   overflow-x: hidden;
 }
 
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: radial-gradient(800px 600px at 50% 30%, rgba(25, 245, 255, 0.18), transparent 60%),
+    radial-gradient(700px 500px at 50% 70%, rgba(255, 75, 216, 0.16), transparent 60%),
+    rgba(6, 7, 12, 0.96);
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.loader.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-ring {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 2px solid rgba(25, 245, 255, 0.45);
+  box-shadow: 0 0 30px rgba(25, 245, 255, 0.25);
+  animation: ringPulse 1.6s ease-in-out infinite;
+}
+
+.loader-logo {
+  width: 110px;
+  height: 110px;
+  filter: drop-shadow(0 0 18px rgba(25, 245, 255, 0.4));
+  animation: logoPulse 1.4s ease-in-out infinite;
+}
+
+.loader span {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 3px;
+  color: var(--muted);
+}
+
 body::before {
   content: "";
   position: fixed;
@@ -674,6 +717,31 @@ textarea {
 [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@keyframes ringPulse {
+  0% {
+    transform: scale(0.75);
+    opacity: 0.5;
+  }
+  70% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.15);
+    opacity: 0;
+  }
+}
+
+@keyframes logoPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
 }
 
 @media (max-width: 900px) {

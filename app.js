@@ -39,6 +39,14 @@ if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
+const loader = document.getElementById("page-loader");
+if (loader) {
+  window.addEventListener("load", () => {
+    loader.classList.add("is-hidden");
+    setTimeout(() => loader.remove(), 700);
+  });
+}
+
 const sliders = document.querySelectorAll("[data-slider]");
 sliders.forEach((slider) => {
   const track = slider.querySelector("[data-slider-track]");
